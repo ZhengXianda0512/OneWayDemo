@@ -1,0 +1,138 @@
+PODS:
+  - Alamofire (4.5.1)
+  - CocoaLumberjack/Default (3.4.1)
+  - CocoaLumberjack/Swift (3.4.1):
+    - CocoaLumberjack/Default
+  - Differentiator (3.0.2)
+  - FreeStreamer (3.8.3):
+    - Reachability (~> 3.0)
+  - HappyDNS (0.3.13)
+  - JCore (1.1.7)
+  - JPush (3.0.8):
+    - JCore (~> 1.1.7)
+  - Kingfisher (4.5.0)
+  - MGSwipeTableCell (1.6.6)
+  - Moya/Core (10.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (10.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - NSObject+Rx (4.2.0):
+    - RxSwift (~> 4.0)
+  - ObjectMapper (3.1.0)
+  - ObjectMapper+Realm (0.5):
+    - ObjectMapper
+    - RealmSwift
+  - OpenUDID (1.0.0)
+  - PKHUD (5.0.0)
+  - Qiniu (7.2.3):
+    - HappyDNS (~> 0.3)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - Reachability (3.2)
+  - Realm (3.3.2):
+    - Realm/Headers (= 3.3.2)
+  - Realm/Headers (3.3.2)
+  - RealmSwift (3.3.2):
+    - Realm (= 3.3.2)
+  - Result (3.2.4)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SnapKit (4.0.0)
+  - Spring (1.0.5)
+  - SwiftProtobuf (1.0.3)
+  - UMengAnalytics (4.1.10)
+  - UMengUShare/Core (6.4.8.2):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.8.2)
+  - UMengUShare/Social/QQ (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedQQ (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/WeChat (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI (6.4.8.2):
+    - UMengUShare/Core
+  - URLNavigator (2.0.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5.0)
+  - CocoaLumberjack/Swift
+  - FreeStreamer (~> 3.8.0)
+  - JPush (~> 3.0.6)
+  - Kingfisher (~> 4.5.0)
+  - MGSwipeTableCell
+  - Moya/RxSwift (~> 10.0.0)
+  - NSObject+Rx (~> 4.2.0)
+  - ObjectMapper (~> 3.1.0)
+  - ObjectMapper+Realm
+  - OpenUDID (~> 1.0.0)
+  - PKHUD (~> 5.0)
+  - Qiniu
+  - R.swift (~> 4.0.0)
+  - RealmSwift
+  - RxCocoa (~> 4.1.0)
+  - RxDataSources (~> 3.0)
+  - RxSwift (~> 4.1.0)
+  - SnapKit (~> 4.0)
+  - Spring (~> 1.0.5)
+  - SwiftProtobuf (~> 1.0.2)
+  - UMengAnalytics (~> 4.1.2)
+  - UMengUShare/Social/QQ
+  - UMengUShare/Social/Sina
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
+  - URLNavigator (~> 2.0.4)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  FreeStreamer: b205b0bf6a2e7855f935369145498f930eb27cac
+  HappyDNS: 17732b07a75bb9756bd6fe04452609e8da8c663e
+  JCore: f7459c81c135281a874a6beafdd321666adcc834
+  JPush: 9574d072cc37e93fa293ba69b43ce763c440943a
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
+  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
+  NSObject+Rx: cbbc05e3cb3ad446cdbced3e00e39c9efaf02925
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  Qiniu: ae0fea1cc379fae1560d8748ac537e0fbeb8626e
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
+  RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
+  SwiftProtobuf: 5ccc0e4054e37c75800e5744acb2aa80bb72b39c
+  UMengAnalytics: 40585031b7eb085534c68a951b394731e7166257
+  UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
+  URLNavigator: af5582fbbb3586c958be16835d799bfdb23a4793
+
+PODFILE CHECKSUM: 9565ed1ae6fab6ee4adacdfd16a33dd5027af876
+
+COCOAPODS: 1.4.0
