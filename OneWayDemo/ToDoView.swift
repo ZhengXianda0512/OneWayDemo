@@ -85,14 +85,6 @@ class ToDoView: UIView {
         setupStore()
     }
     
-    func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
-        }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
-    }
-    
     //MARK: - 处理状态变化
     func stateDidChanged(state: State, previousState: State?, command: Command?) {
         //处理异步命令
@@ -154,4 +146,15 @@ extension ToDoView {
 
     }
     
+}
+
+//MARK: - 仓库相关配置
+extension ToDoView {
+    func setupStore() {
+        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState, command in
+            self.stateDidChanged(state: state, previousState: previousState, command: command)
+        }
+        stateDidChanged(state: store.state, previousState: nil, command: nil)
+    }
 }

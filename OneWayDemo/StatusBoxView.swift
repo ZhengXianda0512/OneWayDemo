@@ -21,7 +21,7 @@ class StatusBoxView: UIView {
     struct State: StateType {
         var title: String = ""
         var status: ToDo.Status = .none
-        var changeStatusEvent: ((ToDo.Status) -> Void)?
+        var changeStatusEvent: ((StatusBoxView, ToDo.Status) -> Void)?
     }
     
     //MARK: - 异步命令
@@ -32,7 +32,7 @@ class StatusBoxView: UIView {
     //MARK: - 事件
     enum Action: ActionType {
         case updateStatus(status: ToDo.Status)
-        case updateChangeStatusEvent(changeStatusEvent: ((ToDo.Status) -> Void)?)
+        case updateChangeStatusEvent(changeStatusEvent: ((StatusBoxView, ToDo.Status) -> Void)?)
     }
     
     //MARK: - 关联 事件、状态变化、异步命令
@@ -78,14 +78,6 @@ class StatusBoxView: UIView {
         setupStore()
     }
     
-    func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
-        }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
-    }
-    
     //MARK: - 处理状态变化
     func stateDidChanged(state: State, previousState: State?, command: Command?) {
         //处理异步命令
@@ -119,6 +111,10 @@ class StatusBoxView: UIView {
 extension StatusBoxView {
     @objc func statusButtonTapped() {
         agent?.statusBoxView(self, statusButtonTapped: statusButton, with: store.state.status)
+        
+        if let changeStatusEvent = store.state.changeStatusEvent {
+            changeStatusEvent(self, store.state.status)
+        }
     }
 }
 
@@ -141,4 +137,15 @@ extension StatusBoxView {
         statusButton.addTarget(self, action: #selector(statusButtonTapped), for: .touchUpInside)
     }
     
+}
+
+//MARK: - 仓库相关配置
+extension StatusBoxView {
+    func setupStore() {
+        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState, command in
+            self.stateDidChanged(state: state, previousState: previousState, command: command)
+        }
+        stateDidChanged(state: store.state, previousState: nil, command: nil)
+    }
 }

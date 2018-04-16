@@ -70,14 +70,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
-        }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
-    }
-    
     //MARK: - 处理状态变化
     func stateDidChanged(state: State, previousState: State?, command: Command?) {
         //处理异步命令
@@ -93,14 +85,14 @@ class ViewController: UIViewController {
 //MARK: - 代理事件
 extension ViewController: ToDoTableViewDelegate {
     func toDoTableView(_ toDoTableView: ToDoTableView, toDoTableViewCell: ToDoTableViewCell, toDoView: ToDoView, statusBoxView: StatusBoxView, statusButtonTapped statusButton: UIButton, with status: ToDo.Status) {
-        switch status {
-        case .none:
-            break
-        case .doing:
-            statusBoxView.store.dispatch(.updateStatus(status: .completed))
-        case .completed:
-            statusBoxView.store.dispatch(.updateStatus(status: .doing))
-        }
+//        switch status {
+//        case .none:
+//            break
+//        case .doing:
+//            statusBoxView.store.dispatch(.updateStatus(status: .completed))
+//        case .completed:
+//            statusBoxView.store.dispatch(.updateStatus(status: .doing))
+//        }
     }
 }
 
@@ -110,6 +102,7 @@ extension ViewController {
     
     func setupUI() {
         toDoTableView.agent = self
+        toDoTableView.allowsSelection = false
         view.addSubview(toDoTableView)
         toDoTableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -119,5 +112,31 @@ extension ViewController {
     func setupUIResponse() {
         
     }
-    
+}
+
+//MARK: - 仓库相关配置
+extension ViewController {
+    func setupStore() {
+        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState, command in
+            self.stateDidChanged(state: state, previousState: previousState, command: command)
+        }
+        
+        store.dispatch(.toDoTableView(action:
+            .updateToDoCellEvent(cellEvent:
+              .toDoView(action:
+                .statusBoxView(action:
+                    .updateChangeStatusEvent(changeStatusEvent: { (statusBoxView, status) in
+                        switch status {
+                        case .none:
+                            break
+                        case .doing:
+                            statusBoxView.store.dispatch(.updateStatus(status: .completed))
+                        case .completed:
+                            statusBoxView.store.dispatch(.updateStatus(status: .doing))
+                        }
+                    }))))))
+        
+        stateDidChanged(state: store.state, previousState: nil, command: nil)
+    }
 }

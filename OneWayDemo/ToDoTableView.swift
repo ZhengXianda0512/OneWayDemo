@@ -21,6 +21,7 @@ class ToDoTableView: UITableView {
     struct State: StateType {
         var toDoList: [ToDo] = []
         var sectionCount: Int = 0
+        var toDoCellEvent: ToDoTableViewCell.Action?
     }
     
     //MARK: - 异步命令
@@ -31,6 +32,7 @@ class ToDoTableView: UITableView {
     //MARK: - 事件
     enum Action: ActionType {
         case updateToDoList(toDoList: [ToDo])
+        case updateToDoCellEvent(cellEvent: ToDoTableViewCell.Action?)
     }
     
     //MARK: - 关联 事件、状态变化、异步命令
@@ -43,6 +45,8 @@ class ToDoTableView: UITableView {
         case .updateToDoList(let toDoList):
             state.toDoList = toDoList
             state.sectionCount = state.toDoList.count
+        case .updateToDoCellEvent(let toDoCellEvent):
+            state.toDoCellEvent = toDoCellEvent
         }
         return (state, command)
     }
@@ -65,14 +69,6 @@ class ToDoTableView: UITableView {
         setupUI()
         setupUIResponse()
         setupStore()
-    }
-    
-    func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
-        }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
     }
     
     //MARK: - 处理状态变化
@@ -113,6 +109,10 @@ extension ToDoTableView: UITableViewDataSource {
         cell.store.dispatch(.toDoView(action: .updateStatus(status: toDo.status)))
         cell.store.dispatch(.toDoView(action: .statusBoxView(action: .updateStatus(status: toDo.status))))
         
+        if let toDoCellEvent = store.state.toDoCellEvent {
+            cell.store.dispatch(toDoCellEvent)
+        }
+        
         return cell as UITableViewCell
     }
 }
@@ -136,4 +136,15 @@ extension ToDoTableView {
         
     }
     
+}
+
+//MARK: - 仓库相关配置
+extension ToDoTableView {
+    func setupStore() {
+        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState, command in
+            self.stateDidChanged(state: state, previousState: previousState, command: command)
+        }
+        stateDidChanged(state: store.state, previousState: nil, command: nil)
+    }
 }
