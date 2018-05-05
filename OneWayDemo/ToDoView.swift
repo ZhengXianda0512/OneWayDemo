@@ -23,11 +23,6 @@ class ToDoView: UIView {
         var status: ToDo.Status = .none
     }
     
-    //MARK: - 异步命令
-    enum Command: CommandType {
-        case none
-    }
-    
     //MARK: - 事件
     enum Action: ActionType {
         case updateStatus(status: ToDo.Status)
@@ -37,10 +32,8 @@ class ToDoView: UIView {
     }
     
     //MARK: - 关联 事件、状态变化、异步命令
-    lazy var reducer: (State, Action) -> (state: State, command: Command?) = { [unowned self] (state: State, action: Action) in
-        
+    lazy var reducer: (Action, State) -> State = { [unowned self] (action: Action, state: State) in
         var state:State = state
-        var command: Command? = nil
         
         switch action {
         case .updateStatus(let status):
@@ -50,11 +43,11 @@ class ToDoView: UIView {
         case .statusBoxView(let action):
             self.statusBoxView.store.dispatch(action)
         }
-        return (state, command)
+        return (state)
     }
     
     //MARK: - 仓库
-    var store: Store<Action, State, Command>!
+    var store: TKStore<Action, State>!
     
     // MARK: - 用户界面相关属性
     lazy var titleLabel: UILabel = {
@@ -75,25 +68,18 @@ class ToDoView: UIView {
         super.init(frame: frame)
         setupUI()
         setupUIResponse()
-        setupStore()
+        setupTKStore()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
         setupUIResponse()
-        setupStore()
+        setupTKStore()
     }
     
     //MARK: - 处理状态变化
-    func stateDidChanged(state: State, previousState: State?, command: Command?) {
-        //处理异步命令
-        if let command = command {
-            switch command {
-            case .none: break
-            }
-        }
-        
+    func stateDidChanged(state: State, previousState: State?) {
         //处理状态变化
         if previousState == nil || previousState!.status != state.status {
             switch state.status {
@@ -150,11 +136,11 @@ extension ToDoView {
 
 //MARK: - 仓库相关配置
 extension ToDoView {
-    func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
+    func setupTKStore() {
+        store = TKStore<Action, State>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState in
+            self.stateDidChanged(state: state, previousState: previousState)
         }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
+        stateDidChanged(state: store.state, previousState: nil)
     }
 }

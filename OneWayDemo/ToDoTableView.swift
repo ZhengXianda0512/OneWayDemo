@@ -24,11 +24,6 @@ class ToDoTableView: UITableView {
         var toDoCellEvent: ToDoTableViewCell.Action?
     }
     
-    //MARK: - 异步命令
-    enum Command: CommandType {
-        case none
-    }
-    
     //MARK: - 事件
     enum Action: ActionType {
         case updateToDoList(toDoList: [ToDo])
@@ -36,10 +31,8 @@ class ToDoTableView: UITableView {
     }
     
     //MARK: - 关联 事件、状态变化、异步命令
-    lazy var reducer: (State, Action) -> (state: State, command: Command?) = { [unowned self] (state: State, action: Action) in
-        
+    lazy var reducer: (Action, State) -> State = { [unowned self] (action: Action, state: State) in
         var state:State = state
-        var command: Command? = nil
         
         switch action {
         case .updateToDoList(let toDoList):
@@ -48,11 +41,11 @@ class ToDoTableView: UITableView {
         case .updateToDoCellEvent(let toDoCellEvent):
             state.toDoCellEvent = toDoCellEvent
         }
-        return (state, command)
+        return (state)
     }
     
     //MARK: - 仓库
-    var store: Store<Action, State, Command>!
+    var store: TKStore<Action, State>!
     
     // MARK: - 用户界面相关属性
     
@@ -72,14 +65,7 @@ class ToDoTableView: UITableView {
     }
     
     //MARK: - 处理状态变化
-    func stateDidChanged(state: State, previousState: State?, command: Command?) {
-        //处理异步命令
-        if let command = command {
-            switch command {
-            case .none: break
-            }
-        }
-        
+    func stateDidChanged(state: State, previousState: State?) {
         //处理状态变化
         if previousState == nil || !previousState!.toDoList.elementsEqual(state.toDoList, by: { (toDo, newToDo) -> Bool in
             return toDo.title == newToDo.title &&
@@ -141,10 +127,10 @@ extension ToDoTableView {
 //MARK: - 仓库相关配置
 extension ToDoTableView {
     func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
+        store = TKStore<Action, State>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState in
+            self.stateDidChanged(state: state, previousState: previousState)
         }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
+        stateDidChanged(state: store.state, previousState: nil)
     }
 }

@@ -24,31 +24,24 @@ class ToDoTableViewCell: UITableViewCell {
         
     }
     
-    //MARK: - 异步命令
-    enum Command: CommandType {
-        case none
-    }
-    
     //MARK: - 事件
     enum Action: ActionType {
         case toDoView(action: ToDoView.Action)
     }
     
     //MARK: - 关联 事件、状态变化、异步命令
-    lazy var reducer: (State, Action) -> (state: State, command: Command?) = { [unowned self] (state: State, action: Action) in
-        
+    lazy var reducer: (Action, State) -> State = { [unowned self] (action: Action, state: State) in
         var state:State = state
-        var command: Command? = nil
         
         switch action {
         case .toDoView(let action):
             self.toDoView.store.dispatch(action)
         }
-        return (state, command)
+        return (state)
     }
     
     //MARK: - 仓库
-    var store: Store<Action, State, Command>!
+    var store: TKStore<Action, State>!
     
     // MARK: - 用户界面相关属性
     lazy var toDoView: ToDoView = {
@@ -76,13 +69,8 @@ class ToDoTableViewCell: UITableViewCell {
     }
     
     //MARK: - 处理状态变化
-    func stateDidChanged(state: State, previousState: State?, command: Command?) {
-        //处理异步命令
-        if let command = command {
-            switch command {
-            case .none: break
-            }
-        }
+    func stateDidChanged(state: State, previousState: State?) {
+        
     }
 }
 
@@ -118,10 +106,10 @@ extension ToDoTableViewCell {
 //MARK: - 仓库相关配置
 extension ToDoTableViewCell {
     func setupStore() {
-        store = Store<Action, State, Command>(reducer: reducer, initialState: State())
-        store.subscribe { [unowned self] state, previousState, command in
-            self.stateDidChanged(state: state, previousState: previousState, command: command)
+        store = TKStore<Action, State>(reducer: reducer, initialState: State())
+        store.subscribe { [unowned self] state, previousState in
+            self.stateDidChanged(state: state, previousState: previousState)
         }
-        stateDidChanged(state: store.state, previousState: nil, command: nil)
+        stateDidChanged(state: store.state, previousState: nil)
     }
 }
