@@ -10,7 +10,6 @@ import Foundation
 
 protocol ActionType {}
 protocol StateType {}
-protocol CommandType {}
 
 class TKStore<A: ActionType, S: StateType> {
     let reducer: (_ action: A, _ state: S) -> S
