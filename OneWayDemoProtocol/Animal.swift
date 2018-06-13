@@ -8,7 +8,26 @@
 
 import UIKit
 
-class Animal: GenderProrocol {
+class AnimalAction: Action {
+    enum AnimalEvent {
+        case updateGender(gender: String)
+    }
+    
+    convenience init(_ animal: AnimalEvent){
+        self.init()
+        
+        event = { object in
+            if let animalObject = object as? Person {
+                switch animal {
+                case .updateGender(let gender):
+                    animalObject.updateGender(gender)
+                }
+            }
+        }
+    }
+}
+
+class Animal: Dispatch, GenderProrocol {
     var displayGender: String = ""
     
     private(set) var gender: String = "" {

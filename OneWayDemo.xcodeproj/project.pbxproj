@@ -37,6 +37,8 @@
 		4EDA4F0720D0C76900A3B7F2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F0620D0C76900A3B7F2 /* Animal.swift */; };
 		4EDA4F0920D0C7B500A3B7F2 /* Prorocol-Stature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F0820D0C7B500A3B7F2 /* Prorocol-Stature.swift */; };
 		4EDA4F0B20D0CBA500A3B7F2 /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F0A20D0CBA500A3B7F2 /* PersonManager.swift */; };
+		4EDA4F1020D1175200A3B7F2 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F0F20D1175200A3B7F2 /* Action.swift */; };
+		4EDA4F1220D118AF00A3B7F2 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */; };
 		4EE422D420834B4100835DF7 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D320834B4100835DF7 /* ToDoTableViewCell.swift */; };
 		4EE422D62084155500835DF7 /* ToDoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D52084155500835DF7 /* ToDoTableView.swift */; };
 		4EE422DA2084711A00835DF7 /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D92084711A00835DF7 /* ToDoDataManager.swift */; };
@@ -84,6 +86,8 @@
 		4EDA4F0620D0C76900A3B7F2 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		4EDA4F0820D0C7B500A3B7F2 /* Prorocol-Stature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prorocol-Stature.swift"; sourceTree = "<group>"; };
 		4EDA4F0A20D0CBA500A3B7F2 /* PersonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
+		4EDA4F0F20D1175200A3B7F2 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		4EE422D320834B4100835DF7 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		4EE422D52084155500835DF7 /* ToDoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableView.swift; sourceTree = "<group>"; };
 		4EE422D92084711A00835DF7 /* ToDoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
@@ -184,9 +188,11 @@
 		4EDA4EEB20D0C1DD00A3B7F2 /* OneWayDemoProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				4EDA4EF020D0C1DD00A3B7F2 /* Main.storyboard */,
 				4EDA4EEC20D0C1DD00A3B7F2 /* AppDelegate.swift */,
 				4EDA4EEE20D0C1DD00A3B7F2 /* ViewController.swift */,
-				4EDA4EF020D0C1DD00A3B7F2 /* Main.storyboard */,
+				4EDA4F0F20D1175200A3B7F2 /* Action.swift */,
+				4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */,
 				4EDA4EFE20D0C21B00A3B7F2 /* Animal.swift */,
 				4EDA4EFD20D0C21B00A3B7F2 /* Person.swift */,
 				4EDA4EFF20D0C21B00A3B7F2 /* Protocol-Gender.swift */,
@@ -578,11 +584,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EDA4F0B20D0CBA500A3B7F2 /* PersonManager.swift in Sources */,
+				4EDA4F1020D1175200A3B7F2 /* Action.swift in Sources */,
 				4EDA4F0020D0C21B00A3B7F2 /* Protocol-Name.swift in Sources */,
 				4EDA4EEF20D0C1DD00A3B7F2 /* ViewController.swift in Sources */,
 				4EDA4F0120D0C21B00A3B7F2 /* Person.swift in Sources */,
 				4EDA4EED20D0C1DD00A3B7F2 /* AppDelegate.swift in Sources */,
 				4EDA4F0920D0C7B500A3B7F2 /* Prorocol-Stature.swift in Sources */,
+				4EDA4F1220D118AF00A3B7F2 /* Dispatch.swift in Sources */,
 				4EDA4F0320D0C21B00A3B7F2 /* Protocol-Gender.swift in Sources */,
 				4EDA4F0220D0C21B00A3B7F2 /* Animal.swift in Sources */,
 			);

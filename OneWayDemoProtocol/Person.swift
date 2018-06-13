@@ -8,6 +8,28 @@
 
 import UIKit
 
+class PersonAction: AnimalAction {
+    enum PersonEvent {
+        case updateName(name: String)
+        case updateStature(stature: Stature)
+    }
+    
+    convenience init(_ animal: PersonEvent){
+        self.init()
+        
+        event = { object in
+            if let personObject = object as? Person {
+                switch animal {
+                case .updateName(let name):
+                    personObject.updateName(name)
+                case .updateStature(let stature):
+                    personObject.updateStature(stature)
+                }
+            }
+        }
+    }
+}
+
 class Person: Animal, NameProrocol, StatureProrocol {
     //Display
     var displayName: String = ""
