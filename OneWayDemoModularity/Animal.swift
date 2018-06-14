@@ -8,6 +8,25 @@
 
 import Foundation
 
+class AnimalAction: Action {
+    enum AnimalEvent {
+        case updateGender(gender: String)
+    }
+    
+    convenience init(_ animal: AnimalEvent){
+        self.init()
+        
+        event = { object in
+            if let animalObject = object as? Person {
+                switch animal {
+                case .updateGender(let gender):
+                    animalObject.gender.update(gender)
+                }
+            }
+        }
+    }
+}
+
 class Animal {
     var displayGender: String = ""
     var gender: Module<String> = Module<String>()

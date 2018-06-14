@@ -8,6 +8,28 @@
 
 import Foundation
 
+class PersonAction: AnimalAction {
+    enum PersonEvent {
+        case updateName(name: String)
+        case updateStature(stature: Stature)
+    }
+    
+    convenience init(_ animal: PersonEvent){
+        self.init()
+        
+        event = { object in
+            if let personObject = object as? Person {
+                switch animal {
+                case .updateName(let name):
+                    personObject.name.update(name)
+                case .updateStature(let stature):
+                    personObject.stature.update(stature)
+                }
+            }
+        }
+    }
+}
+
 struct Stature: Equatable {
     static let `default` = Stature(height: 0, weight: 0)
     

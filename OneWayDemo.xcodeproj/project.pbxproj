@@ -39,6 +39,8 @@
 		4EDA4F0B20D0CBA500A3B7F2 /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F0A20D0CBA500A3B7F2 /* PersonManager.swift */; };
 		4EDA4F1020D1175200A3B7F2 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F0F20D1175200A3B7F2 /* Action.swift */; };
 		4EDA4F1220D118AF00A3B7F2 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */; };
+		4EDA4F7B20D2411D00A3B7F2 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F7920D2411C00A3B7F2 /* Dispatch.swift */; };
+		4EDA4F7C20D2411D00A3B7F2 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F7A20D2411D00A3B7F2 /* Action.swift */; };
 		4EE422D420834B4100835DF7 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D320834B4100835DF7 /* ToDoTableViewCell.swift */; };
 		4EE422D62084155500835DF7 /* ToDoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D52084155500835DF7 /* ToDoTableView.swift */; };
 		4EE422DA2084711A00835DF7 /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D92084711A00835DF7 /* ToDoDataManager.swift */; };
@@ -88,6 +90,8 @@
 		4EDA4F0A20D0CBA500A3B7F2 /* PersonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
 		4EDA4F0F20D1175200A3B7F2 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		4EDA4F7920D2411C00A3B7F2 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		4EDA4F7A20D2411D00A3B7F2 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4EE422D320834B4100835DF7 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		4EE422D52084155500835DF7 /* ToDoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableView.swift; sourceTree = "<group>"; };
 		4EE422D92084711A00835DF7 /* ToDoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 			children = (
 				4EDA4ECA20CF672E00A3B7F2 /* AppDelegate.swift */,
 				4EDA4ECC20CF672E00A3B7F2 /* ViewController.swift */,
+				4EDA4F7A20D2411D00A3B7F2 /* Action.swift */,
+				4EDA4F7920D2411C00A3B7F2 /* Dispatch.swift */,
 				4EDA4EE020CF741400A3B7F2 /* Module.swift */,
 				4EDA4EDE20CF6AFE00A3B7F2 /* Person.swift */,
 				4EDA4F0620D0C76900A3B7F2 /* Animal.swift */,
@@ -575,7 +581,9 @@
 				4EDA4ECB20CF672E00A3B7F2 /* AppDelegate.swift in Sources */,
 				4EDA4EE320CFFFC600A3B7F2 /* PersonManager.swift in Sources */,
 				4EDA4EE120CF741400A3B7F2 /* Module.swift in Sources */,
+				4EDA4F7C20D2411D00A3B7F2 /* Action.swift in Sources */,
 				4EDA4F0720D0C76900A3B7F2 /* Animal.swift in Sources */,
+				4EDA4F7B20D2411D00A3B7F2 /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

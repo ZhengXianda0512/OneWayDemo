@@ -39,6 +39,11 @@ class ViewController: UIViewController {
         person.gender.update("gender")
         person.name.update("name")
         person.stature.update(Stature(height: 99, weight: 66))
+        
+        person.dispatch(PersonAction(.updateGender(gender: "dispatch-gender")))
+        person.dispatch(PersonAction(.updateName(name: "dispatch-name")))
+        person.dispatch(PersonAction(.updateStature(stature: Stature(height: 299, weight: 266))))
+        
         person.query()
     }
 
