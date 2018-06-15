@@ -15,9 +15,19 @@ struct Stature: Equatable {
     var weight: Float
 }
 
-protocol StatureProrocol {
-    var stature: Stature { get }
+protocol StatureProrocol: class {
+    var stature: Stature? { get set }
     
-    func updateStature(_ stature: Stature) -> Void
-    func statureDidChange(oldStature: Stature, stature: Stature) -> Void
+    func updateStature(_ stature: Stature?) -> Void
+    func statureDidChange(oldStature: Stature?, stature: Stature?) -> Void
+}
+
+extension StatureProrocol {
+    func updateStature(_ stature: Stature?) -> Void {
+        if self.stature == nil || self.stature != stature {
+            let oldStature = self.stature
+            self.stature = stature
+            statureDidChange(oldStature: oldStature, stature: stature)
+        }
+    }
 }

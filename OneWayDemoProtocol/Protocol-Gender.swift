@@ -8,9 +8,19 @@
 
 import Foundation
 
-protocol GenderProrocol {
-    var gender: String { get }
+protocol GenderProrocol: class {
+    var gender: String? { get set }
     
-    func updateGender(_ gender: String) -> Void
-    func genderDidChange(oldGender: String, gender: String) -> Void
+    func updateGender(_ gender: String?) -> Void
+    func genderDidChange(oldGender: String?, gender: String?) -> Void
+}
+
+extension GenderProrocol {
+    func updateGender(_ gender: String?) -> Void {
+        if self.gender == nil || self.gender != gender {
+            let oldGender = self.gender
+            self.gender = gender
+            genderDidChange(oldGender: oldGender, gender: gender)
+        }
+    }
 }

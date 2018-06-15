@@ -10,15 +10,15 @@ import UIKit
 
 class AnimalAction: Action {
     enum AnimalEvent {
-        case updateGender(gender: String)
+        case updateGender(gender: String?)
     }
     
-    convenience init(_ animal: AnimalEvent){
+    convenience init(_ animalEvent: AnimalEvent){
         self.init()
         
         event = { object in
             if let animalObject = object as? Person {
-                switch animal {
+                switch animalEvent {
                 case .updateGender(let gender):
                     animalObject.updateGender(gender)
                 }
@@ -30,20 +30,22 @@ class AnimalAction: Action {
 class Animal: Dispatch, GenderProrocol {
     var displayGender: String = ""
     
-    private(set) var gender: String = "" {
-         didSet {
-            if gender != oldValue {
-                genderDidChange(oldGender: oldValue, gender: gender)
-            }
-        }
+    var gender: String?
+    
+    init() {
+        initialization()
     }
     
-    func updateGender(_ gender: String) {
-        self.gender = gender
+    func initialization() {
+        self.dispatch(AnimalAction(.updateGender(gender: gender)))
     }
     
-    func genderDidChange(oldGender: String, gender: String) {
-        displayGender = "性别: \(gender)"
+    func genderDidChange(oldGender: String?, gender: String?) {
+        displayGender = "性别: \(gender ?? "")"
         print(displayGender)
+    }
+    
+    deinit {
+        print("deinit: Animal")
     }
 }

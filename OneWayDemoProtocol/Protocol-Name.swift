@@ -8,9 +8,19 @@
 
 import Foundation
 
-protocol NameProrocol {
-    var name: String { get }
+protocol NameProrocol: class {
+    var name: String? { get set }
     
-    func updateName(_ name: String) -> Void
-    func nameDidChange(oldName: String, name: String) -> Void
+    func updateName(_ name: String?) -> Void
+    func nameDidChange(oldName: String?, name: String?) -> Void
+}
+
+extension NameProrocol {
+    func updateName(_ name: String?) -> Void {
+        if self.name == nil || self.name != name {
+            let oldName = self.name
+            self.name = name
+            nameDidChange(oldName: oldName, name: name)
+        }
+    }
 }

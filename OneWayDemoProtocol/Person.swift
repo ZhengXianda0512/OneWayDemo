@@ -10,20 +10,23 @@ import UIKit
 
 class PersonAction: AnimalAction {
     enum PersonEvent {
-        case updateName(name: String)
-        case updateStature(stature: Stature)
+        case updateName(name: String?)
+        case updateStature(stature: Stature?)
+        case query
     }
     
-    convenience init(_ animal: PersonEvent){
+    convenience init(_ personEvent: PersonEvent){
         self.init()
         
         event = { object in
             if let personObject = object as? Person {
-                switch animal {
+                switch personEvent {
                 case .updateName(let name):
                     personObject.updateName(name)
                 case .updateStature(let stature):
                     personObject.updateStature(stature)
+                case .query:
+                    personObject.query()
                 }
             }
         }
@@ -35,43 +38,25 @@ class Person: Animal, NameProrocol, StatureProrocol {
     var displayName: String = ""
     var displayStature: String = ""
     
-    //name
-    private(set) var name: String = "" {
-        didSet {
-            if name != oldValue {
-                nameDidChange(oldName: oldValue, name: name)
-            }
-        }
+    var name: String?
+    var stature: Stature?
+    
+    override func initialization() {
+        super.initialization()
+        self.dispatch(PersonAction(.updateName(name: name)))
+        self.dispatch(PersonAction(.updateStature(stature: stature)))
     }
     
-    func updateName(_ name: String) {
-        self.name = name
-    }
-    
-    func nameDidChange(oldName: String, name: String) {
-        displayName = "姓名: \(name)"
+    func nameDidChange(oldName: String?, name: String?) {
+        displayName = "姓名: \(name ?? "")"
         print(displayName)
     }
     
-    //stature
-    private(set) var stature: Stature = Stature.default {
-        didSet {
-            if stature != oldValue {
-                statureDidChange(oldStature: oldValue, stature: stature)
-            }
-        }
-    }
-    
-    func updateStature(_ stature: Stature) {
-        self.stature = stature
-    }
-    
-    func statureDidChange(oldStature: Stature, stature: Stature) {
-        displayStature = "身材: \(stature)"
+    func statureDidChange(oldStature: Stature?, stature: Stature?) {
+        displayStature = "身材: \(stature ?? Stature.default)"
         print(displayStature)
     }
     
-    //action
     func query() {
         PersonManager.shared.query { [weak self] (model) in
             if let weakSelf = self {
@@ -80,5 +65,9 @@ class Person: Animal, NameProrocol, StatureProrocol {
                 weakSelf.updateStature(model.stature)
             }
         }
+    }
+    
+    deinit {
+        print("deinit: Person")
     }
 }
