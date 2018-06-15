@@ -27,7 +27,7 @@ class AnimalAction: Action {
     }
 }
 
-class Animal {
+class Animal: Dispatch {
     var displayGender: String = ""
     var gender: Module<String> = Module<String>()
     
