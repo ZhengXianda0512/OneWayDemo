@@ -25,3 +25,8 @@ target 'OneWayDemoModularity' do
     
 end
 
+target 'OneWayDemoModularityPlus' do
+    
+    base_framework
+    
+end

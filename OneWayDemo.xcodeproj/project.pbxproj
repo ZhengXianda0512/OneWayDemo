@@ -41,15 +41,29 @@
 		4EDA4F1220D118AF00A3B7F2 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */; };
 		4EDA4F7B20D2411D00A3B7F2 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F7920D2411C00A3B7F2 /* Dispatch.swift */; };
 		4EDA4F7C20D2411D00A3B7F2 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4F7A20D2411D00A3B7F2 /* Action.swift */; };
+		4EDA4FA320DCC5A400A3B7F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FA220DCC5A400A3B7F2 /* AppDelegate.swift */; };
+		4EDA4FA520DCC5A400A3B7F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FA420DCC5A400A3B7F2 /* ViewController.swift */; };
+		4EDA4FA820DCC5A400A3B7F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA4FA620DCC5A400A3B7F2 /* Main.storyboard */; };
+		4EDA4FAA20DCC5A600A3B7F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA4FA920DCC5A600A3B7F2 /* Assets.xcassets */; };
+		4EDA4FAD20DCC5A600A3B7F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA4FAB20DCC5A600A3B7F2 /* LaunchScreen.storyboard */; };
+		4EDA4FB820DCC5EE00A3B7F2 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FB220DCC5ED00A3B7F2 /* Dispatch.swift */; };
+		4EDA4FB920DCC5EE00A3B7F2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FB320DCC5ED00A3B7F2 /* Animal.swift */; };
+		4EDA4FBA20DCC5EE00A3B7F2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FB420DCC5EE00A3B7F2 /* Module.swift */; };
+		4EDA4FBB20DCC5EE00A3B7F2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FB520DCC5EE00A3B7F2 /* Person.swift */; };
+		4EDA4FBC20DCC5EE00A3B7F2 /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FB620DCC5EE00A3B7F2 /* PersonManager.swift */; };
+		4EDA4FBD20DCC5EE00A3B7F2 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FB720DCC5EE00A3B7F2 /* Action.swift */; };
+		4EDA4FBF20DCC6AC00A3B7F2 /* ModuleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA4FBE20DCC6AC00A3B7F2 /* ModuleDelegate.swift */; };
 		4EE422D420834B4100835DF7 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D320834B4100835DF7 /* ToDoTableViewCell.swift */; };
 		4EE422D62084155500835DF7 /* ToDoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D52084155500835DF7 /* ToDoTableView.swift */; };
 		4EE422DA2084711A00835DF7 /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE422D92084711A00835DF7 /* ToDoDataManager.swift */; };
+		619FC79C5F12811BBF5ABA2F /* Pods_OneWayDemoModularityPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9375E98F9F4632051DCF067 /* Pods_OneWayDemoModularityPlus.framework */; };
 		731596361699F6836EF087FB /* Pods_OneWayDemoModularity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4AC3C1E9D7C957E1699109 /* Pods_OneWayDemoModularity.framework */; };
 		CCB6E99BA4BBCEF4E683D2A8 /* Pods_OneWayDemoProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DC848D4232ECF3EF4EAE3B /* Pods_OneWayDemoProtocol.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01B6517F18C3F9596382D825 /* Pods-OneWayDemoProtocol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemoProtocol.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemoProtocol/Pods-OneWayDemoProtocol.release.xcconfig"; sourceTree = "<group>"; };
+		04A73ED5C5F94BBFE6DD8593 /* Pods-OneWayDemoModularityPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemoModularityPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemoModularityPlus/Pods-OneWayDemoModularityPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		1B31CF7EFA283ECA41347EDE /* Pods-OneWayDemoModularity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemoModularity.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemoModularity/Pods-OneWayDemoModularity.release.xcconfig"; sourceTree = "<group>"; };
 		284730DC6D6C100C049B8BA1 /* Pods-OneWayDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemo/Pods-OneWayDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3B073F3E45036D332045D8D6 /* Pods_OneWayDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneWayDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,12 +106,28 @@
 		4EDA4F1120D118AF00A3B7F2 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		4EDA4F7920D2411C00A3B7F2 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		4EDA4F7A20D2411D00A3B7F2 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		4EDA4FA020DCC5A400A3B7F2 /* OneWayDemoModularityPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWayDemoModularityPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EDA4FA220DCC5A400A3B7F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4EDA4FA420DCC5A400A3B7F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EDA4FA720DCC5A400A3B7F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EDA4FA920DCC5A600A3B7F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EDA4FAC20DCC5A600A3B7F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EDA4FAE20DCC5A600A3B7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EDA4FB220DCC5ED00A3B7F2 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		4EDA4FB320DCC5ED00A3B7F2 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		4EDA4FB420DCC5EE00A3B7F2 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		4EDA4FB520DCC5EE00A3B7F2 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4EDA4FB620DCC5EE00A3B7F2 /* PersonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
+		4EDA4FB720DCC5EE00A3B7F2 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		4EDA4FBE20DCC6AC00A3B7F2 /* ModuleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDelegate.swift; sourceTree = "<group>"; };
 		4EE422D320834B4100835DF7 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		4EE422D52084155500835DF7 /* ToDoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableView.swift; sourceTree = "<group>"; };
 		4EE422D92084711A00835DF7 /* ToDoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
 		54DC848D4232ECF3EF4EAE3B /* Pods_OneWayDemoProtocol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneWayDemoProtocol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC05A6BFB64528BA2B17CFE0 /* Pods-OneWayDemoProtocol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemoProtocol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemoProtocol/Pods-OneWayDemoProtocol.debug.xcconfig"; sourceTree = "<group>"; };
 		C9BEBE56D72BAE79720C74B9 /* Pods-OneWayDemoModularity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemoModularity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemoModularity/Pods-OneWayDemoModularity.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE76C260FBCDE1A254BDCC3 /* Pods-OneWayDemoModularityPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemoModularityPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemoModularityPlus/Pods-OneWayDemoModularityPlus.release.xcconfig"; sourceTree = "<group>"; };
+		E9375E98F9F4632051DCF067 /* Pods_OneWayDemoModularityPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneWayDemoModularityPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F6FB65C0F091489802DDE9 /* Pods-OneWayDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWayDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneWayDemo/Pods-OneWayDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FA4AC3C1E9D7C957E1699109 /* Pods_OneWayDemoModularity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneWayDemoModularity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +157,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EDA4F9D20DCC5A400A3B7F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				619FC79C5F12811BBF5ABA2F /* Pods_OneWayDemoModularityPlus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +174,7 @@
 				4EC6EB97207DE6200069BDEA /* OneWayDemo */,
 				4EDA4EEB20D0C1DD00A3B7F2 /* OneWayDemoProtocol */,
 				4EDA4EC920CF672E00A3B7F2 /* OneWayDemoModularity */,
+				4EDA4FA120DCC5A400A3B7F2 /* OneWayDemoModularityPlus */,
 				4EC6EB96207DE6200069BDEA /* Products */,
 				B02EFC869D788A3362E6C4F1 /* Pods */,
 				5E2AC4356BDCEA1E399182E4 /* Frameworks */,
@@ -148,6 +187,7 @@
 				4EC6EB95207DE6200069BDEA /* OneWayDemo.app */,
 				4EDA4EC820CF672E00A3B7F2 /* OneWayDemoModularity.app */,
 				4EDA4EEA20D0C1DD00A3B7F2 /* OneWayDemoProtocol.app */,
+				4EDA4FA020DCC5A400A3B7F2 /* OneWayDemoModularityPlus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,12 +252,33 @@
 			path = OneWayDemoProtocol;
 			sourceTree = "<group>";
 		};
+		4EDA4FA120DCC5A400A3B7F2 /* OneWayDemoModularityPlus */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA4FA220DCC5A400A3B7F2 /* AppDelegate.swift */,
+				4EDA4FA420DCC5A400A3B7F2 /* ViewController.swift */,
+				4EDA4FB720DCC5EE00A3B7F2 /* Action.swift */,
+				4EDA4FB320DCC5ED00A3B7F2 /* Animal.swift */,
+				4EDA4FB220DCC5ED00A3B7F2 /* Dispatch.swift */,
+				4EDA4FB420DCC5EE00A3B7F2 /* Module.swift */,
+				4EDA4FBE20DCC6AC00A3B7F2 /* ModuleDelegate.swift */,
+				4EDA4FB520DCC5EE00A3B7F2 /* Person.swift */,
+				4EDA4FB620DCC5EE00A3B7F2 /* PersonManager.swift */,
+				4EDA4FA620DCC5A400A3B7F2 /* Main.storyboard */,
+				4EDA4FA920DCC5A600A3B7F2 /* Assets.xcassets */,
+				4EDA4FAB20DCC5A600A3B7F2 /* LaunchScreen.storyboard */,
+				4EDA4FAE20DCC5A600A3B7F2 /* Info.plist */,
+			);
+			path = OneWayDemoModularityPlus;
+			sourceTree = "<group>";
+		};
 		5E2AC4356BDCEA1E399182E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3B073F3E45036D332045D8D6 /* Pods_OneWayDemo.framework */,
 				FA4AC3C1E9D7C957E1699109 /* Pods_OneWayDemoModularity.framework */,
 				54DC848D4232ECF3EF4EAE3B /* Pods_OneWayDemoProtocol.framework */,
+				E9375E98F9F4632051DCF067 /* Pods_OneWayDemoModularityPlus.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,6 +292,8 @@
 				1B31CF7EFA283ECA41347EDE /* Pods-OneWayDemoModularity.release.xcconfig */,
 				AC05A6BFB64528BA2B17CFE0 /* Pods-OneWayDemoProtocol.debug.xcconfig */,
 				01B6517F18C3F9596382D825 /* Pods-OneWayDemoProtocol.release.xcconfig */,
+				04A73ED5C5F94BBFE6DD8593 /* Pods-OneWayDemoModularityPlus.debug.xcconfig */,
+				DEE76C260FBCDE1A254BDCC3 /* Pods-OneWayDemoModularityPlus.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -298,6 +361,26 @@
 			productReference = 4EDA4EEA20D0C1DD00A3B7F2 /* OneWayDemoProtocol.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4EDA4F9F20DCC5A400A3B7F2 /* OneWayDemoModularityPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDA4FB120DCC5A600A3B7F2 /* Build configuration list for PBXNativeTarget "OneWayDemoModularityPlus" */;
+			buildPhases = (
+				93A26A79D658C726D98665A0 /* [CP] Check Pods Manifest.lock */,
+				4EDA4F9C20DCC5A400A3B7F2 /* Sources */,
+				4EDA4F9D20DCC5A400A3B7F2 /* Frameworks */,
+				4EDA4F9E20DCC5A400A3B7F2 /* Resources */,
+				C6764867E8D6EE70EEA7A53E /* [CP] Embed Pods Frameworks */,
+				DB964DA2D0218A2AB0852274 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneWayDemoModularityPlus;
+			productName = OneWayDemoModularityPlus;
+			productReference = 4EDA4FA020DCC5A400A3B7F2 /* OneWayDemoModularityPlus.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,6 +398,9 @@
 						CreatedOnToolsVersion = 9.4;
 					};
 					4EDA4EE920D0C1DD00A3B7F2 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					4EDA4F9F20DCC5A400A3B7F2 = {
 						CreatedOnToolsVersion = 9.4;
 					};
 				};
@@ -335,6 +421,7 @@
 				4EC6EB94207DE6200069BDEA /* OneWayDemo */,
 				4EDA4EC720CF672E00A3B7F2 /* OneWayDemoModularity */,
 				4EDA4EE920D0C1DD00A3B7F2 /* OneWayDemoProtocol */,
+				4EDA4F9F20DCC5A400A3B7F2 /* OneWayDemoModularityPlus */,
 			);
 		};
 /* End PBXProject section */
@@ -367,6 +454,16 @@
 				4EDA4EF720D0C1DF00A3B7F2 /* LaunchScreen.storyboard in Resources */,
 				4EDA4EF420D0C1DF00A3B7F2 /* Assets.xcassets in Resources */,
 				4EDA4EF220D0C1DD00A3B7F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDA4F9E20DCC5A400A3B7F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDA4FAD20DCC5A600A3B7F2 /* LaunchScreen.storyboard in Resources */,
+				4EDA4FAA20DCC5A600A3B7F2 /* Assets.xcassets in Resources */,
+				4EDA4FA820DCC5A400A3B7F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +566,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneWayDemoProtocol/Pods-OneWayDemoProtocol-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		93A26A79D658C726D98665A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneWayDemoModularityPlus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95EAA743D180F42E68F38611 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,6 +618,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneWayDemoModularity/Pods-OneWayDemoModularity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6764867E8D6EE70EEA7A53E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OneWayDemoModularityPlus/Pods-OneWayDemoModularityPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneWayDemoModularityPlus/Pods-OneWayDemoModularityPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB964DA2D0218A2AB0852274 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneWayDemoModularityPlus/Pods-OneWayDemoModularityPlus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0F00CCCC554FDD0E479F585 /* [CP] Copy Pods Resources */ = {
@@ -604,6 +752,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EDA4F9C20DCC5A400A3B7F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDA4FBB20DCC5EE00A3B7F2 /* Person.swift in Sources */,
+				4EDA4FB820DCC5EE00A3B7F2 /* Dispatch.swift in Sources */,
+				4EDA4FBC20DCC5EE00A3B7F2 /* PersonManager.swift in Sources */,
+				4EDA4FB920DCC5EE00A3B7F2 /* Animal.swift in Sources */,
+				4EDA4FA520DCC5A400A3B7F2 /* ViewController.swift in Sources */,
+				4EDA4FBD20DCC5EE00A3B7F2 /* Action.swift in Sources */,
+				4EDA4FBA20DCC5EE00A3B7F2 /* Module.swift in Sources */,
+				4EDA4FBF20DCC6AC00A3B7F2 /* ModuleDelegate.swift in Sources */,
+				4EDA4FA320DCC5A400A3B7F2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -651,6 +815,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				4EDA4EF620D0C1DF00A3B7F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4EDA4FA620DCC5A400A3B7F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EDA4FA720DCC5A400A3B7F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4EDA4FAB20DCC5A600A3B7F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EDA4FAC20DCC5A600A3B7F2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -780,10 +960,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466T2LS7MJ;
 				INFOPLIST_FILE = OneWayDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,10 +976,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466T2LS7MJ;
 				INFOPLIST_FILE = OneWayDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -819,10 +993,7 @@
 				DEVELOPMENT_TEAM = 466T2LS7MJ;
 				INFOPLIST_FILE = OneWayDemoModularity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemoModularity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -839,10 +1010,7 @@
 				DEVELOPMENT_TEAM = 466T2LS7MJ;
 				INFOPLIST_FILE = OneWayDemoModularity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemoModularity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -859,10 +1027,7 @@
 				DEVELOPMENT_TEAM = 466T2LS7MJ;
 				INFOPLIST_FILE = OneWayDemoProtocol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemoProtocol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -879,11 +1044,42 @@
 				DEVELOPMENT_TEAM = 466T2LS7MJ;
 				INFOPLIST_FILE = OneWayDemoProtocol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemoProtocol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EDA4FAF20DCC5A600A3B7F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A73ED5C5F94BBFE6DD8593 /* Pods-OneWayDemoModularityPlus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 466T2LS7MJ;
+				INFOPLIST_FILE = OneWayDemoModularityPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemoModularityPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EDA4FB020DCC5A600A3B7F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEE76C260FBCDE1A254BDCC3 /* Pods-OneWayDemoModularityPlus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 466T2LS7MJ;
+				INFOPLIST_FILE = OneWayDemoModularityPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TK.OneWayDemoModularityPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -925,6 +1121,15 @@
 			buildConfigurations = (
 				4EDA4EFA20D0C1DF00A3B7F2 /* Debug */,
 				4EDA4EFB20D0C1DF00A3B7F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDA4FB120DCC5A600A3B7F2 /* Build configuration list for PBXNativeTarget "OneWayDemoModularityPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EDA4FAF20DCC5A600A3B7F2 /* Debug */,
+				4EDA4FB020DCC5A600A3B7F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

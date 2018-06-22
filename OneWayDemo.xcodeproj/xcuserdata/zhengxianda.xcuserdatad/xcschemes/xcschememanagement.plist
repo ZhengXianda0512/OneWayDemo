@@ -7,12 +7,17 @@
 		<key>OneWayDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>OneWayDemoModularity.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
+		</dict>
+		<key>OneWayDemoModularityPlus.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>OneWayDemoProtocol.xcscheme</key>
 		<dict>
