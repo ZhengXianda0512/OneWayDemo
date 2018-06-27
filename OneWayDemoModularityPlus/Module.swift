@@ -11,12 +11,16 @@ import Foundation
 public class Module<C: AnyObject, V>  {
     
     private(set) var value: V?
-    private(set) var delegate: ModuleDelegate<C, V>?
+    var delegate: ModuleDelegate<C, V>?
     private weak var target: C?
     
     init(delegate: ModuleDelegate<C, V>) {
         self.delegate = delegate
         self.target = delegate.target
+    }
+    
+    init() {
+        
     }
     
 }
